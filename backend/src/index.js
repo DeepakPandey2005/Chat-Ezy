@@ -34,15 +34,9 @@ app.get("/health", (req, res) => {
 
 if(process.env.NODE_ENV==="production"){
   app.use(express.static(path.join(__dirname,"../frontend/dist")))
-
-  app.get("*",(req,res)=>{
-    req.sendFile(path.join(__dirname,"../frontend","dist","index.html"))
-
-  })
 }
 
 server.listen(port, () => {
   console.log("server is running on http://localhost:" + port);
-  console.log(process.env.MONGO_URL);
   connectDb();
 });
