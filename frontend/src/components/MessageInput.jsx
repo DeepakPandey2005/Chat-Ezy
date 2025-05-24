@@ -53,7 +53,7 @@ const MessageInput = () => {
         <div className="mb-3 flex items-center gap-2">
           <div className="relative">
             <img
-              src={imagePreview}
+              src={imagePreview} 
               alt="Preview"
               className="w-20 h-20 object-cover rounded-lg border border-zinc-700"
             />
@@ -88,7 +88,7 @@ const MessageInput = () => {
 
           <button
             type="button"
-            className={`hidden sm:flex btn btn-circle
+            className={` sm:flex btn btn-circle
                      ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
             onClick={() => fileInputRef.current?.click()}
           >
